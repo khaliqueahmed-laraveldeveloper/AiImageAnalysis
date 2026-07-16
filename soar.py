@@ -4,9 +4,8 @@ import json
 
 # 1. Setup Connections
 r = redis.Redis(host='localhost', port=6379, decode_responses=True)
-# client = genai.client(api_key="AIzaSyBpbPRpor7eNY47QyESWo2rpYsTocTByTM")
-# model = genai.GenerativeModel('gemini-2.5-flash')
-client = genai.Client(api_key="AIzaSyBpbPRpor7eNY47QyESWo2rpYsTocTByTM")
+
+client = genai.Client(api_key="API_KEY_HERE")
 def analyze_incident(log_entry):
     """The Brain: Uses AI to decide if this is a threat."""
     prompt = f"""
